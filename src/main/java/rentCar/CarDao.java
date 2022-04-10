@@ -1,6 +1,9 @@
 package rentCar;
 
-public class CarDao implements CarDaoInterface{
+public class CarDao extends AbstractCarDao<Car>{
 
 
+    public CarDao(){
+        super(Car.class);
+    }
 }
