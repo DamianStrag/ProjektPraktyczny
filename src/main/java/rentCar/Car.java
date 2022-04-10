@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "CARS")
 
-public class Cars {
+public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,7 +23,7 @@ public class Cars {
     private String color;
 
     @Column(name = "registration_number")
-    private int registration_number;
+    private String registration_number;
 
     @Column(name = "vechicle_condition")
     @Enumerated(EnumType.STRING)
@@ -34,7 +34,7 @@ public class Cars {
 
 
 
-    public Cars(int carId, String brand, String model, String color, int number, Vechicle_condition condition, BigDecimal cost) {
+    public Car(int carId, String brand, String model, String color, String number, Vechicle_condition condition, BigDecimal cost) {
         this.carId = carId;
         this.brand = brand;
         this.model = model;
@@ -76,11 +76,11 @@ public class Cars {
         this.color = color;
     }
 
-    public int getRegistration_number() {
+    public String getRegistration_number() {
         return registration_number;
     }
 
-    public void setRegistration_number(int registration_number) {
+    public void setRegistration_number(String registration_number) {
         this.registration_number = registration_number;
     }
 
